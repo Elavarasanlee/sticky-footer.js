@@ -1,10 +1,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
-//Screen_height = Header_height + Main_Content_height + Footer_height + alltoplvlContainersMarginTop_Bottom + alltoplvlContainersPaddingTop_Bottom
-//For demo purpose I've used only 3 top level containers: header,main and footer, Which is very common practise. But this may vary.
- 
-var header_id = "#header", footer_id = "#footer", main_id = "#main";  //All id's of top level containers. 
- 
+//Function Declaration
 function sum_of_top_bottom_props(id) {
     if($(id).length>0) { //If id exists in the page, fetch the sum of float values of padding-top,bottom margin-top,bottom, border-top,bottom-width.
         var prop_padding = parseFloat($(id).css('padding-top'))+parseFloat($(id).css('padding-bottom'));
@@ -31,5 +27,12 @@ function sticky_footer() {
     else
         alert("There is no element existing in your page with id = "+main_id);
 }
+</script>
+<script type="text/javascript">
+//Screen_height = Header_height + Main_Content_height + Footer_height + alltoplvlContainersMarginTop_Bottom + alltoplvlContainersPaddingTop_Bottom
+//For demo purpose I've used only 3 top level containers: header,main and footer, Which is very common practise. But this may vary.
+ 
+var header_id = "#header", footer_id = "#footer", main_id = "#main";  //All id's of top level containers. 
+//Function call
 $(document).ready(sticky_footer); //Once the document is ready call the function sticky_footer().
 </script>
