@@ -14,7 +14,7 @@ function sum_of_top_bottom_props(id) {
     }
 }
 function sticky_footer() {
-    var screen_height = $(window).height(),
+    var screen_height = $(window).height(), //Total height of the screen which is rendered within a browser window without having to scroll-down.
     header_height = ($(header_id).length>0) ? $(header_id).height():0,
     footer_height = ($(footer_id).length>0) ? $(footer_id).height():0,
     header_props  = sum_of_top_bottom_props(header_id),
