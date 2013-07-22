@@ -1,7 +1,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
 //Screen_height = Header_height + Main_Content_height + Footer_height + alltoplvlContainersMarginTop_Bottom + alltoplvlContainersPaddingTop_Bottom
-//Function Declaration
 function sum_of_top_bottom_props(id) {
     var elem_id = $(id);
     if(elem_id.length>0) {
@@ -16,8 +15,8 @@ function sum_of_top_bottom_props(id) {
     }
 }
 function sticky_footer() {
-    var header = $(header_id), footer = $(footer_id), content = $(main_id);
-    var screen_height = $(window).height(), //Total height of the screen which is rendered within a browser window without having to scroll-down.
+    var header = $(header_id), footer = $(footer_id), content = $(main_id),
+		screen_height = $(window).height(), //Total height of the screen which is rendered within a browser window without having to scroll-down.
         header_height = (header.length>0) ? header.height():0, footer_height = (footer.length>0) ? footer.height():0,
         header_props = sum_of_top_bottom_props(header_id), footer_props = sum_of_top_bottom_props(footer_id),
         main_props = sum_of_top_bottom_props(main_id),
