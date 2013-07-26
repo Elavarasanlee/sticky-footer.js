@@ -38,10 +38,10 @@
 //For demo purpose I've used only 3 top level containers: header,main and footer, Which is very common practise. 
 //But this may vary according to your site design.
   (function($, window, document) {
-   $(function() { //On document ready initialize id's of containers to corresponding variables.
-       var header_id = $("#header"), footer_id = $("#footer"), main_id = $("#content"); //All id's of top level containers.
-       if(header_id.length>0 && footer_id.length>0 && main_id.length>0)
-            sticky_footer(header_id,footer_id,main_id);
-   });
+	   $(function() { //On document ready initialize id's of containers to corresponding variables.
+		   var header_id = $("#header"), footer_id = $("#footer"), main_id = $("#content"); //All id's of top level containers.
+		   if(header_id.length>0 && footer_id.length>0 && main_id.length>0)
+				$(document).sticky_footer(header_id,footer_id,main_id);
+	   });
   }(window.jQuery, window, document));
 </script>
