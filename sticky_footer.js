@@ -40,8 +40,10 @@
   (function($, window, document) {
 	   $(function() { //On document ready initialize id's of containers to corresponding variables.
 		   var header_id = $("#header"), footer_id = $("#footer"), main_id = $("#content"); //All id's of top level containers.
-		   if(header_id.length>0 && footer_id.length>0 && main_id.length>0)
+		   if(header_id.length>0 && footer_id.length>0 && main_id.length>0) {
 				$(document).sticky_footer(header_id,footer_id,main_id);
+				$(window).resize(function(){$(document).sticky_footer(header_id,footer_id,main_id);}); //Bind sticky footer function with window.resize method
+		   }
 	   });
   }(window.jQuery, window, document));
 </script>
