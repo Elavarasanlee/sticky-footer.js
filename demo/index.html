@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Sticky Footer Demo</title>
+    <link rel="stylesheet" href="demo.css" type="text/css" media="all">
+</head>
+<body>
+ <noscript>
+ 	<b>Activate JavaScript in your browser to add fuel to tho this demo engine.</b>
+ </noscript>
+ <div id="header" class="common-prop">
+ 	<strong>Header</strong>
+ </div>
+ <div id="main">
+     <p>
+       <i>
+          Click on the <a href="http://en.wikipedia.org/wiki/Ashoka_Chakra" target="_href">Ashoka Chakra</a> to toggle the footer position.
+       </i>
+     </p>
+       <img id ="ashoka_chakra" src="Ashoka_Chakra.png" alt="Ashoka_Chakra" class="ashoka_chakra" title="Toggle Footer Position."/>
+     <p>
+     	<a class="web-home" href="http://elavarasanlee.in">elavarasanlee.in</a>
+     </p>
+     <p>
+     	Fork Sticky Footer from <a href="https://github.com/Elavarasanlee/sticky-footer.js">Git Hub</a>.
+     </p>
+ </div>
+ <div id="footer" class="common-prop">
+ 	<strong>Footer</strong>
+ </div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="sticky_footer.js"></script>
+<script type="text/javascript">
+(function($, window, document) {
+//For demo purpose I've used only 3 top level containers: header,main and footer, Which is very common practise. 
+//But this may vary according to your site design. In that case you might have to modify the library according to your use.
+ $(function() { //On document ready.
+     var $header_id = $("#header"),
+		 $main_id = $("#main"),
+	 	 $footer_id = $("#footer");  //All id's of top level containers.
+     if($header_id.length>0 && $footer_id.length>0 && $main_id.length>0)
+	 {
+        $(document).sticky_footer($header_id,$footer_id,$main_id);
+        $(window).resize(function(){
+			$(document).sticky_footer($header_id,$footer_id,$main_id); //Bind sticky footer function with window.resize method
+		});
+		//The following part is only for Demo.
+		//Start Toogle Footer.
+        var $chakra = $("#ashoka_chakra");
+        $chakra.click(function(){
+              var min_height = parseFloat($main_id.css('min-height'));
+              if(min_height==0)
+			  	$(document).sticky_footer($header_id,$footer_id,$main_id);
+              else
+			  	$main_id.css('min-height',0);
+        });
+		//End Toogle Footer.
+     }
+ });
+}(window.jQuery, window, document));
+</script>
+</html>
