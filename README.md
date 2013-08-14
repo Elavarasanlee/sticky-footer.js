@@ -4,7 +4,7 @@ sticky-footer.js
 ###Plugin to fix the sticky footer issue using jQuery on the fly.###
 
 ###What is Sticky Footer?###
-The Footer of a webpage that stays at bottom of the page even when there’s not much of main content.
+The Footer of a webpage that stays at bottom of the page even when thereï¿½s not much of main content.
 	
 ###Can't this be fixed using CSS?###
 Yes it can be. And the solution is here: http://css-tricks.com/snippets/css/sticky-footer/
