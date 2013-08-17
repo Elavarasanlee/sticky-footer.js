@@ -1,44 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Sticky-footer.js by Elavarasanlee</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Sticky-footer.js : Plugin to fix the sticky footer issue using javascript and jquery on the fly" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sticky-footer.js</title>
   </head>
+
   <body>
 
-      <header>
-        <h1>Sticky-footer.js</h1>
-        <p>Plugin to fix the sticky footer issue using javascript and jquery on the fly</p>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Elavarasanlee/sticky-footer.js">View on GitHub</a>
 
-      <div id="banner">
-        <span id="logo"></span>
+          <h1 id="project_title">Sticky-footer.js</h1>
+          <h2 id="project_tagline">Plugin to fix the sticky footer issue using javascript and jquery on the fly</h2>
 
-        <a href="https://github.com/Elavarasanlee/sticky-footer.js" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/Elavarasanlee/sticky-footer.js/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/Elavarasanlee/sticky-footer.js/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Elavarasanlee/sticky-footer.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Elavarasanlee/sticky-footer.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="sticky-footerjs" class="anchor" href="#sticky-footerjs"><span class="octicon octicon-link"></span></a>sticky-footer.js</h1>
 
@@ -95,36 +87,38 @@
         &lt;!-- Footer links or copyright info. --&gt;
     &lt;/div&gt;
 &lt;/body&gt;
-
-===or===
-
-&lt;body&gt;
-    &lt;div id="pagewrap"&gt;
-        &lt;header id="header"&gt;
-            Header Content.
-            &lt;!-- Site logo, Menu or Header Banner. --&gt;
-        &lt;/header&gt;
-        &lt;div id="content"&gt;
-            &lt;article class="post"&gt;
-                Main Content.
-                &lt;!-- The main content of the current page. --&gt;
-            &lt;/article&gt;
-        &lt;/div&gt;
-        &lt;aside id="sidebar"&gt;
-            &lt;section class="widget"&gt;
-                &lt;!-- Your awesome widget which sits on the right or left side of your page depending upon you styling. --&gt;
-            &lt;/section&gt;
-        &lt;/aside&gt;
-        &lt;footer id="footer"&gt;
-            Footer Content.
-            &lt;!-- Footer links or copyright info. --&gt;
-        &lt;/footer&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
 </code></pre>
 </li>
+</ul><p>===or===</p>
+
+<pre><code>    &lt;body&gt;
+        &lt;div id="pagewrap"&gt;
+            &lt;header id="header"&gt;
+                Header Content.
+                &lt;!-- Site logo, Menu or Header Banner. --&gt;
+            &lt;/header&gt;
+            &lt;div id="content"&gt;
+                &lt;article class="post"&gt;
+                    Main Content.
+                    &lt;!-- The main content of the current page. --&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+            &lt;aside id="sidebar"&gt;
+                &lt;section class="widget"&gt;
+                    &lt;!-- Your awesome widget which sits on the right or left side of your page depending upon you styling. --&gt;
+                &lt;/section&gt;
+            &lt;/aside&gt;
+            &lt;footer id="footer"&gt;
+                Footer Content.
+                &lt;!-- Footer links or copyright info. --&gt;
+            &lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+</code></pre>
+
+<ul>
 <li>
-<p>Add the following scripts within head tag or below body tag(Most preferred and good practice).</p>
+<p>Add the following scripts within head tag or below body tag.</p>
 
 <pre><code>&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="path_to/sticky_footer.js"&gt;&lt;/script&gt;
@@ -158,12 +152,17 @@
 
 <p>If you wish to contribute to improve the plugin, please send pull requests to the "development" branch with clear commit message. Before making any changes, make sure to run the tests to create the baseline results. If some error occurs in supported browser list, please create appropriate tests for it as well before submitting any code changes.</p>
       </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/Elavarasanlee">Elavarasanlee</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sticky-footer.js maintained by <a href="https://github.com/Elavarasanlee">Elavarasanlee</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
+
   </body>
 </html>
