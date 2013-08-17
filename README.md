@@ -1,4 +1,4 @@
-sticky-footer.js
+sticky-footer.js v1.0
 ================
 
 ###Plugin to fix the sticky footer issue using jQuery on the fly.###
@@ -39,7 +39,7 @@ Not checked completely. But wokrs in the following browsers.
 			</div>
 		</body>
 		
-		===or===
+===or===
 		
 		<body>
 			<div id="pagewrap">
@@ -65,7 +65,7 @@ Not checked completely. But wokrs in the following browsers.
 			</div>
 		</body>
 
-* Add the following scripts within head tag or below body tag(Most preferred and good practice).
+* Add the following scripts within head tag or below body tag.
 	
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="path_to/sticky_footer.js"></script>

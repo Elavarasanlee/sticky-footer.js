@@ -1,3 +1,8 @@
+/**
+ * @license sticky-footer.js v1.0
+ * (c) 2013 Elavarasan Muthuvalavan http://elavarasanlee.in
+ * License: MIT
+ */
 (function($, window, document){
 	//Screen_height = Header_height + Main_Content_height + Footer_height + alltoplvlContainersMarginTop_Bottom + alltoplvlContainersPaddingTop_Bottom
 	$.fn.sticky_footer = function(header,footer,content) {
@@ -12,10 +17,11 @@
 							   prop_margin = parseFloat(elem_id.css('margin-top'))+parseFloat(elem_id.css('margin-bottom')),
 							   prop_border = parseFloat(elem_id.css('border-top-width'))+parseFloat(elem_id.css('border-bottom-width'));
 						   return prop_padding+prop_margin+prop_border;
-					   } else{ //If id soesnot exist return 0;
+						}
+						else { //If id soesnot exist return 0;
 						   console.error("The id: "+id+" doesn't exists! Pleas enter a valid id.");
 						   return 0;
-					   }
+						}
 				   }};
 
 			var	header_height = (header.length>0) ? header.height():0, //Height of header
@@ -25,9 +31,14 @@
 				main_props = sum_of_top_bottom_props(content), //Height of properties that contribute to content's height.
 				main_height = screen_height-(header_height + header_props + main_props + footer_props + footer_height);
 
-			if(content!= undefined && content.length>0) { content.css('min-height',main_height); return true; } 
-			else return false;
-		} 
-		else return false;
+			if(content!= undefined && content.length>0) {
+				content.css('min-height',main_height);
+				return true;
+			}
+			else
+				return false;
+		}
+		else
+			return false;
 	}
 })(jQuery, window, document);

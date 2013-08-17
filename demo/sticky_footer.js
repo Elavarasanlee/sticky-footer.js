@@ -1,3 +1,8 @@
+/**
+ * @license sticky-footer.js v1.0
+ * (c) 2013 Elavarasan Muthuvalavan http://elavarasanlee.in
+ * License: MIT
+ */
 (function($, window, document){
 	//Screen_height = Header_height + Main_Content_height + Footer_height + alltoplvlContainersMarginTop_Bottom + alltoplvlContainersPaddingTop_Bottom
 	$.fn.sticky_footer = function(header,footer,content) {
