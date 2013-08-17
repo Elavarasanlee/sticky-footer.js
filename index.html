@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sticky-footer.js by Elavarasanlee</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Sticky-footer.js</h1>
+        <p>Plugin to fix the sticky footer issue using javascript and jquery on the fly</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/Elavarasanlee/sticky-footer.js" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/Elavarasanlee/sticky-footer.js/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/Elavarasanlee/sticky-footer.js/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="sticky-footerjs" class="anchor" href="#sticky-footerjs"><span class="octicon octicon-link"></span></a>sticky-footer.js</h1>
+
+<h3>
+<a name="plugin-to-fix-the-sticky-footer-issue-using-jquery-on-the-fly" class="anchor" href="#plugin-to-fix-the-sticky-footer-issue-using-jquery-on-the-fly"><span class="octicon octicon-link"></span></a>Plugin to fix the sticky footer issue using jQuery on the fly.</h3>
+
+<h3>
+<a name="what-is-sticky-footer" class="anchor" href="#what-is-sticky-footer"><span class="octicon octicon-link"></span></a>What is Sticky Footer?</h3>
+
+<p>The Footer of a webpage that stays at bottom of the page even when there's not much of main content.</p>
+
+<p><img src="http://i.imgur.com/UYR1v57.png" alt="Sticky Footer.png"></p>
+
+<h3>
+<a name="cant-this-be-fixed-using-css" class="anchor" href="#cant-this-be-fixed-using-css"><span class="octicon octicon-link"></span></a>Can't this be fixed using CSS?</h3>
+
+<p>Yes it can be. And the solution is here: <a href="http://css-tricks.com/snippets/css/sticky-footer/">http://css-tricks.com/snippets/css/sticky-footer/</a></p>
+
+<h3>
+<a name="then-why-use-jquery" class="anchor" href="#then-why-use-jquery"><span class="octicon octicon-link"></span></a>Then why use jQuery?</h3>
+
+<ol>
+<li>CSS Solution didn't work out for me.</li>
+<li>Wanted to solve this issue on the fly for all screen sizes. So the best option was to use jQuery.</li>
+</ol><h3>
+<a name="browser-compatibility" class="anchor" href="#browser-compatibility"><span class="octicon octicon-link"></span></a>Browser Compatibility?</h3>
+
+<p>Not checked completely. But wokrs in the following browsers.</p>
+
+<ul>
+<li>Google Chrome.</li>
+<li>Firefox 3.5+</li>
+<li>Opera 12+</li>
+<li>IE 9+</li>
+</ul><h3>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use?</h3>
+
+<ul>
+<li>Download sticky_footer.js file.</li>
+<li>
+<p>Create a HTML page with body contents as follows:</p>
+
+<pre><code>&lt;body&gt;
+    &lt;div id="header"&gt;
+        Header Content.
+        &lt;!-- Site logo, Menu or Header Banner. --&gt;
+    &lt;/div&gt;
+    &lt;div id="content"&gt;
+        Main Content.
+        &lt;!-- The main content of the current page. --&gt;
+    &lt;/div&gt;
+    &lt;div id="footer"&gt;
+        Footer Content.
+        &lt;!-- Footer links or copyright info. --&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+===or===
+
+&lt;body&gt;
+    &lt;div id="pagewrap"&gt;
+        &lt;header id="header"&gt;
+            Header Content.
+            &lt;!-- Site logo, Menu or Header Banner. --&gt;
+        &lt;/header&gt;
+        &lt;div id="content"&gt;
+            &lt;article class="post"&gt;
+                Main Content.
+                &lt;!-- The main content of the current page. --&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+        &lt;aside id="sidebar"&gt;
+            &lt;section class="widget"&gt;
+                &lt;!-- Your awesome widget which sits on the right or left side of your page depending upon you styling. --&gt;
+            &lt;/section&gt;
+        &lt;/aside&gt;
+        &lt;footer id="footer"&gt;
+            Footer Content.
+            &lt;!-- Footer links or copyright info. --&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+</li>
+<li>
+<p>Add the following scripts within head tag or below body tag(Most preferred and good practice).</p>
+
+<pre><code>&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="path_to/sticky_footer.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    (function($, window, document) {
+    //For demo purpose I've used only 3 top level containers: header,main and footer, Which is very common practise. 
+    //But this may vary according to your site design. In that case you might have to modify the library according to your use.
+     $(function() { //On document ready.
+         var $header_id = $("#header"),
+             $main_id = $("#main"),
+             $footer_id = $("#footer");  //All id's of top level containers.
+         if($header_id.length&gt;0 &amp;&amp; $footer_id.length&gt;0 &amp;&amp; $main_id.length&gt;0)
+         {
+            $(document).sticky_footer($header_id,$footer_id,$main_id);
+            $(window).resize(function(){
+                $(document).sticky_footer($header_id,$footer_id,$main_id); //Bind sticky footer function with window.resize method
+            });
+         }
+     });
+    }(window.jQuery, window, document));
+&lt;/script&gt;
+</code></pre>
+</li>
+</ul><h3>
+<a name="can-i-see-the-demo" class="anchor" href="#can-i-see-the-demo"><span class="octicon octicon-link"></span></a>Can I see the Demo?</h3>
+
+<p>Sure. <a href="http://elavarasanlee.in/demos/sticky_footer">http://elavarasanlee.in/demos/sticky_footer</a></p>
+
+<h3>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>If you wish to contribute to improve the plugin, please send pull requests to the "development" branch with clear commit message. Before making any changes, make sure to run the tests to create the baseline results. If some error occurs in supported browser list, please create appropriate tests for it as well before submitting any code changes.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/Elavarasanlee">Elavarasanlee</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
