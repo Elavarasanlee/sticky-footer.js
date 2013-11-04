@@ -72,7 +72,7 @@ Not checked completely. But wokrs in the following browsers.
 		<script type="text/javascript">
 			(function($, window, document) {
 			//For demo purpose I've used only 3 top level containers: header,main and footer, Which is very common practise. 
-			//But this may vary according to your site design. In that case you might have to modify the library according to your use.
+			//But this may vary according to your site design. In that case you might have to modify the plug-in according to your use.
 			 $(function() { //On document ready.
 				 var $header_id = $("#header"),
 					 $main_id = $("#main"),
