@@ -1,36 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Sticky-footer.js : Plugin to fix the sticky footer issue using javascript and jquery on the fly" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sticky-footer.js by Elavarasanlee</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Sticky-footer.js</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Sticky-footer.js</h1>
+        <p class="header">Plugin to fix the sticky footer issue using javascript and jquery on the fly</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Elavarasanlee/sticky-footer.js">View on GitHub</a>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/Elavarasanlee/sticky-footer.js/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/Elavarasanlee/sticky-footer.js/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/Elavarasanlee/sticky-footer.js">View On GitHub</a></li>
+        </ul>
 
-          <h1 id="project_title">Sticky-footer.js</h1>
-          <h2 id="project_tagline">Plugin to fix the sticky footer issue using javascript and jquery on the fly</h2>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/Elavarasanlee">Elavarasanlee</a></p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Elavarasanlee/sticky-footer.js/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Elavarasanlee/sticky-footer.js/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      </header>
+      <section>
         <h1>
 <a name="sticky-footerjs" class="anchor" href="#sticky-footerjs"><span class="octicon octicon-link"></span></a>sticky-footer.js</h1>
 
@@ -118,20 +117,19 @@
 
 <ul>
 <li>
-<p>Add the following scripts within head tag or below body tag.</p>
+<p>Add the following scripts within head tag or below body tag (latter is most preferred).</p>
 
 <pre><code>&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="path_to/sticky_footer.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
     (function($, window, document) {
     //For demo purpose I've used only 3 top level containers: header,main and footer, Which is very common practise. 
-    //But this may vary according to your site design. In that case you might have to modify the library according to your use.
+    //But this may vary according to your site design. In that case you might have to modify the plug-in according to your use.
      $(function() { //On document ready.
          var $header_id = $("#header"),
              $main_id = $("#main"),
              $footer_id = $("#footer");  //All id's of top level containers.
-         if($header_id.length&gt;0 &amp;&amp; $footer_id.length&gt;0 &amp;&amp; $main_id.length&gt;0)
-         {
+         if($header_id.length&gt;0 &amp;&amp; $footer_id.length&gt;0 &amp;&amp; $main_id.length&gt;0) {
             $(document).sticky_footer($header_id,$footer_id,$main_id);
             $(window).resize(function(){
                 $(document).sticky_footer($header_id,$footer_id,$main_id); //Bind sticky footer function with window.resize method
@@ -152,17 +150,11 @@
 
 <p>If you wish to contribute to improve the plugin, please send pull requests to the "development" branch with clear commit message. Before making any changes, make sure to run the tests to create the baseline results. If some error occurs in supported browser list, please create appropriate tests for it as well before submitting any code changes.</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Sticky-footer.js maintained by <a href="https://github.com/Elavarasanlee">Elavarasanlee</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-
-    
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
