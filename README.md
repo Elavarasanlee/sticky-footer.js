@@ -77,8 +77,7 @@ Not checked completely. But wokrs in the following browsers.
 				 var $header_id = $("#header"),
 					 $main_id = $("#main"),
 					 $footer_id = $("#footer");  //All id's of top level containers.
-				 if($header_id.length>0 && $footer_id.length>0 && $main_id.length>0)
-				 {
+				 if($header_id.length>0 && $footer_id.length>0 && $main_id.length>0) {
 					$(document).sticky_footer($header_id,$footer_id,$main_id);
 					$(window).resize(function(){
 						$(document).sticky_footer($header_id,$footer_id,$main_id); //Bind sticky footer function with window.resize method
