@@ -3,14 +3,14 @@
  * (c) 2013 Elavarasan Muthuvalavan http://elavarasanlee.in
  * License: MIT
  */
-(function($, window, document){
+(function($, window, document) {
 	//Screen_height = Header_height + Main_Content_height + Footer_height + alltoplvlContainersMarginTop_Bottom + alltoplvlContainersPaddingTop_Bottom
 	$.fn.sticky_footer = function(header,footer,content) {
 		if(typeof header != undefined && typeof footer != undefined && typeof content != undefined) {
 			var screen_height = $(window).height(); //Total height of the screen which is rendered within a browser window without having to scroll-down.
 
-			var sum_of_top_bottom_props = function(id){ //Returns the sum of float values of padding-top,bottom margin-top,bottom, border-top,bottom-width.
-					if(typeof id != undefined){
+			var sum_of_top_bottom_props = function(id) { //Returns the sum of float values of padding-top,bottom margin-top,bottom, border-top,bottom-width.
+					if(typeof id != undefined) {
 						var elem_id = id;
 						if(elem_id.length>0) { //If id exists in the page, fetch the sum of float values of the properties.
 						   var prop_padding = parseFloat(elem_id.css('padding-top'))+parseFloat(elem_id.css('padding-bottom')),
