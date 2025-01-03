@@ -1,26 +1,26 @@
 sticky-footer.js
 ================
 
-###Plugin to fix the sticky footer issue using jQuery on the fly.###
+### Plugin to fix the sticky footer issue using jQuery on the fly.###
 
-###What is Sticky Footer?###
+### What is Sticky Footer? ###
 The Footer of a webpage that stays at bottom of the page even when there�s not much of main content.
 	
-###Can't this be fixed using CSS?###
+### Can't this be fixed using CSS? ###
 Yes it can be. And the solution is here: http://css-tricks.com/snippets/css/sticky-footer/
 	
-###Then why use jQuery?###
+### Then why use jQuery? ###
 1. CSS Solution didn't work out for me.
 2. Wanted to solve this issue on the fly for all screen sizes. So the best option was to use jQuery.
 
-###Browser Compatibility?###
+### Browser Compatibility? ###
 Not checked completely. But wokrs in the following browsers.
 * Google Chrome.
 * Firefox 3.5+
 * Opera 12+
 * IE 9+
 
-###How to use?###
+### How to use? ###
 * Download sticky_footer.js file.
 * Create a HTML page with body contents as follows:
 
@@ -87,8 +87,8 @@ Not checked completely. But wokrs in the following browsers.
 			}(window.jQuery, window, document));
 		</script>
 
-###Can I see the Demo?###
+### Can I see the Demo? ###
 Sure. http://elavarasanlee.in/demos/sticky_footer
 	
-###Contributing###
+### Contributing ###
 If you wish to contribute to improve the plugin, please send pull requests to the "development" branch with clear commit message. Before making any changes, make sure to run the tests to create the baseline results. If some error occurs in supported browser list, please create appropriate tests for it as well before submitting any code changes.
