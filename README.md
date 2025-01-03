@@ -23,7 +23,7 @@ Not checked completely. But wokrs in the following browsers.
 ### How to use? ###
 * Download sticky_footer.js file.
 * Create a HTML page with body contents as follows:
-
+```html
 		<body>
 			<div id="header">
 				Header Content.
@@ -38,9 +38,11 @@ Not checked completely. But wokrs in the following browsers.
 				<!-- Footer links or copyright info. -->
 			</div>
 		</body>
-		
-		===or===
-		
+```
+
+<p align="center"><<=============>> or <<=============>></div>
+
+```html		
 		<body>
 			<div id="pagewrap">
 				<header id="header">
@@ -64,9 +66,11 @@ Not checked completely. But wokrs in the following browsers.
 				</footer>
 			</div>
 		</body>
+```
 
 * Add the following scripts within head tag or below body tag(Most preferred and good practice).
-	
+
+```html
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="path_to/sticky_footer.js"></script>
 		<script type="text/javascript">
@@ -86,6 +90,7 @@ Not checked completely. But wokrs in the following browsers.
 			 });
 			}(window.jQuery, window, document));
 		</script>
+```
 
 ### Can I see the Demo? ###
 Sure. http://elavarasanlee.in/demos/sticky_footer
